@@ -1,5 +1,6 @@
 <template xmlns:v-on="http://www.w3.org/1999/xhtml">
     <div style="margin-top:50px;text-align: center" class="jumbotron">
+        <img src="../assets/logo.png" alt="">
         <h1>The Hobbit's Word Game</h1>
         <button class="btn btn-primary btn-lg" v-if="!started" v-on:click="startGame">Start Game</button>
         <div v-if="started">
