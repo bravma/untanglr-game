@@ -1,28 +1,25 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <hello></hello>
+    <div class="container">
+      <marvin></marvin>
+    </div>
   </div>
 </template>
 
 <script>
-import Hello from './components/Hello'
+import Marvin from './components/Marvin'
+import Bootstrap from 'bootstrap/dist/css/bootstrap.css'
 
 export default {
   name: 'app',
   components: {
-    Hello
+    Marvin
+  },
+  methods: {
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
