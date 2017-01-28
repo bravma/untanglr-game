@@ -1,11 +1,11 @@
 <template xmlns:v-on="http://www.w3.org/1999/xhtml">
-    <div class="jumbotron">
+    <div style="margin-top:50px;text-align: center" class="jumbotron">
         <h1>The Hobbit's Word Game</h1>
-        <button class="btn btn-primary" v-if="!started" v-on:click="startGame">Start Game</button>
+        <button class="btn btn-primary btn-lg" v-if="!started" v-on:click="startGame">Start Game</button>
         <div v-if="started">
             <p>Guess the following word: <b>{{tangledWord}}</b></p>
             <div class="row">
-                <div class="col-sm-12">
+                <div class="col-sm-6 col-sm-offset-3">
                     <input type="text" v-model="guess" v-on:keyup="keyPressed" class="form-control input-lg"/>
                 </div>
             </div>
@@ -17,7 +17,7 @@
 </template>
 <script>
     export default {
-        name: "Marvin",
+        name: "Untanglr",
         data() {
             return {
                 tangledWord: "izazp",
@@ -26,9 +26,9 @@
                 failures: 0,
                 points: 0,
                 started: false,
+                isGameOver: false,
                 countdown: 40,
-                interval: {},
-                isGameOver: false
+                interval: {}
             }
         },
         methods: {
@@ -59,6 +59,11 @@
                     clearInterval(this.interval);
                 }
                 this.countdown--;
+            },
+            getNextTangledWord() {
+                let tangledWords = [
+                    {tangledWord: "izazp",  untangledWord: "pizza"}
+                ];
             }
         }
     }

@@ -1,25 +1,21 @@
 <template>
   <div id="app">
     <div class="container">
-      <marvin></marvin>
+      <untanglr></untanglr>
     </div>
   </div>
 </template>
 
 <script>
-import Marvin from './components/Marvin'
+import Untanglr from './components/Untanglr'
 import Bootstrap from 'bootstrap/dist/css/bootstrap.css'
 
 export default {
   name: 'app',
   components: {
-    Marvin
+    Untanglr
   },
   methods: {
   }
 }
 </script>
-
-<style>
-
-</style>
